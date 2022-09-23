@@ -49,10 +49,6 @@ class BirdsController < ApplicationController
     if bird
       bird.destroy
       head :no_content
-      else
-        render json: { error: "Bird not found" }, status: :not_found
-      end
-    end
   private
 
   def bird_params
